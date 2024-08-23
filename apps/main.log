@@ -283,3 +283,443 @@ WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relki
 2024-08-24 00:47:09,305 - INFO -  * Debugger PIN: 120-295-465
 2024-08-24 00:48:52,017 - INFO -  * Detected change in 'C:\\Users\\lenovo\\PycharmProjects\\user_app\\logging_package\\logging_module.py', reloading
 2024-08-24 00:48:52,182 - INFO -  * Restarting with stat
+2024-08-24 00:48:53,340 - INFO - select pg_catalog.version()
+2024-08-24 00:48:53,340 - INFO - [raw sql] {}
+2024-08-24 00:48:53,341 - INFO - select current_schema()
+2024-08-24 00:48:53,341 - INFO - [raw sql] {}
+2024-08-24 00:48:53,341 - INFO - show standard_conforming_strings
+2024-08-24 00:48:53,341 - INFO - [raw sql] {}
+2024-08-24 00:48:53,342 - INFO - BEGIN (implicit)
+2024-08-24 00:48:53,346 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 00:48:53,346 - INFO - [generated in 0.00039s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 00:48:53,352 - INFO - COMMIT
+2024-08-24 00:48:53,380 - WARNING -  * Debugger is active!
+2024-08-24 00:48:53,385 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 01:05:14,665 - INFO - select pg_catalog.version()
+2024-08-24 01:05:14,666 - INFO - [raw sql] {}
+2024-08-24 01:05:14,672 - INFO - select current_schema()
+2024-08-24 01:05:14,672 - INFO - [raw sql] {}
+2024-08-24 01:05:14,676 - INFO - show standard_conforming_strings
+2024-08-24 01:05:14,677 - INFO - [raw sql] {}
+2024-08-24 01:05:14,677 - INFO - BEGIN (implicit)
+2024-08-24 01:05:14,684 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 01:05:14,685 - INFO - [generated in 0.00051s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 01:05:14,697 - INFO - COMMIT
+2024-08-24 01:05:14,796 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-08-24 01:05:14,797 - INFO - [33mPress CTRL+C to quit[0m
+2024-08-24 01:05:14,801 - INFO -  * Restarting with stat
+2024-08-24 01:05:15,741 - INFO - select pg_catalog.version()
+2024-08-24 01:05:15,741 - INFO - [raw sql] {}
+2024-08-24 01:05:15,742 - INFO - select current_schema()
+2024-08-24 01:05:15,743 - INFO - [raw sql] {}
+2024-08-24 01:05:15,743 - INFO - show standard_conforming_strings
+2024-08-24 01:05:15,743 - INFO - [raw sql] {}
+2024-08-24 01:05:15,744 - INFO - BEGIN (implicit)
+2024-08-24 01:05:15,748 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 01:05:15,748 - INFO - [generated in 0.00028s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 01:05:15,751 - INFO - COMMIT
+2024-08-24 01:05:15,773 - WARNING -  * Debugger is active!
+2024-08-24 01:05:15,781 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 01:06:27,325 - INFO - Entering fetch_records function
+2024-08-24 01:06:27,419 - INFO - BEGIN (implicit)
+2024-08-24 01:06:27,423 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info
+2024-08-24 01:06:27,424 - INFO - [generated in 0.00044s] {}
+2024-08-24 01:06:27,431 - INFO - Total records fetched: 2
+2024-08-24 01:06:27,432 - INFO - ROLLBACK
+2024-08-24 01:06:27,432 - INFO - Exiting fetch_records function
+2024-08-24 01:06:27,433 - INFO - 127.0.0.1 - - [24/Aug/2024 01:06:27] "GET /get_records HTTP/1.1" 200 -
+2024-08-24 01:07:57,271 - INFO -  * Detected change in 'C:\\Users\\lenovo\\PycharmProjects\\user_app\\apps\\app.py', reloading
+2024-08-24 01:07:57,473 - INFO -  * Restarting with stat
+2024-08-24 01:07:59,064 - INFO - select pg_catalog.version()
+2024-08-24 01:07:59,064 - INFO - [raw sql] {}
+2024-08-24 01:07:59,065 - INFO - select current_schema()
+2024-08-24 01:07:59,065 - INFO - [raw sql] {}
+2024-08-24 01:07:59,066 - INFO - show standard_conforming_strings
+2024-08-24 01:07:59,066 - INFO - [raw sql] {}
+2024-08-24 01:07:59,066 - INFO - BEGIN (implicit)
+2024-08-24 01:07:59,071 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 01:07:59,071 - INFO - [generated in 0.00027s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 01:07:59,074 - INFO - COMMIT
+2024-08-24 01:07:59,098 - WARNING -  * Debugger is active!
+2024-08-24 01:07:59,101 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 01:07:59,856 - INFO - Entering fetch_records function
+2024-08-24 01:07:59,927 - INFO - BEGIN (implicit)
+2024-08-24 01:07:59,929 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info
+2024-08-24 01:07:59,930 - INFO - [generated in 0.00025s] {}
+2024-08-24 01:07:59,933 - INFO - Total records fetched: 2
+2024-08-24 01:08:04,612 - INFO - ROLLBACK
+2024-08-24 01:08:04,613 - INFO - Exiting fetch_records function
+2024-08-24 01:08:04,615 - INFO - 127.0.0.1 - - [24/Aug/2024 01:08:04] "GET /get_records HTTP/1.1" 200 -
+2024-08-24 01:08:31,146 - INFO -  * Detected change in 'C:\\Users\\lenovo\\PycharmProjects\\user_app\\apps\\app.py', reloading
+2024-08-24 01:08:31,412 - INFO -  * Restarting with stat
+2024-08-24 01:08:32,680 - INFO - select pg_catalog.version()
+2024-08-24 01:08:32,680 - INFO - [raw sql] {}
+2024-08-24 01:08:32,681 - INFO - select current_schema()
+2024-08-24 01:08:32,681 - INFO - [raw sql] {}
+2024-08-24 01:08:32,682 - INFO - show standard_conforming_strings
+2024-08-24 01:08:32,682 - INFO - [raw sql] {}
+2024-08-24 01:08:32,683 - INFO - BEGIN (implicit)
+2024-08-24 01:08:32,688 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 01:08:32,689 - INFO - [generated in 0.00085s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 01:08:32,693 - INFO - COMMIT
+2024-08-24 01:08:32,721 - WARNING -  * Debugger is active!
+2024-08-24 01:08:32,725 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 01:08:32,762 - INFO - Entering fetch_records function
+2024-08-24 01:08:32,820 - INFO - BEGIN (implicit)
+2024-08-24 01:08:32,823 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info
+2024-08-24 01:08:32,824 - INFO - [generated in 0.00019s] {}
+2024-08-24 01:08:32,826 - INFO - Total records fetched: 2
+2024-08-24 01:08:37,142 - INFO - ROLLBACK
+2024-08-24 01:08:37,143 - INFO - Exiting fetch_records function
+2024-08-24 01:08:37,145 - INFO - 127.0.0.1 - - [24/Aug/2024 01:08:37] "GET /get_records HTTP/1.1" 200 -
+2024-08-24 01:08:53,445 - INFO -  * Detected change in 'C:\\Users\\lenovo\\PycharmProjects\\user_app\\apps\\app.py', reloading
+2024-08-24 01:08:53,693 - INFO -  * Restarting with stat
+2024-08-24 01:08:54,944 - INFO - select pg_catalog.version()
+2024-08-24 01:08:54,944 - INFO - [raw sql] {}
+2024-08-24 01:08:54,945 - INFO - select current_schema()
+2024-08-24 01:08:54,946 - INFO - [raw sql] {}
+2024-08-24 01:08:54,947 - INFO - show standard_conforming_strings
+2024-08-24 01:08:54,947 - INFO - [raw sql] {}
+2024-08-24 01:08:54,948 - INFO - BEGIN (implicit)
+2024-08-24 01:08:54,954 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 01:08:54,954 - INFO - [generated in 0.00045s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 01:08:54,962 - INFO - COMMIT
+2024-08-24 01:08:54,998 - WARNING -  * Debugger is active!
+2024-08-24 01:08:55,004 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 01:08:55,055 - INFO - Entering fetch_records function
+2024-08-24 01:08:55,125 - INFO - BEGIN (implicit)
+2024-08-24 01:08:55,127 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info
+2024-08-24 01:08:55,127 - INFO - [generated in 0.00025s] {}
+2024-08-24 01:08:55,130 - INFO - Total records fetched: 2
+2024-08-24 01:08:59,368 - INFO - ROLLBACK
+2024-08-24 01:08:59,368 - INFO - Exiting fetch_records function
+2024-08-24 01:08:59,369 - INFO - 127.0.0.1 - - [24/Aug/2024 01:08:59] "GET /get_records HTTP/1.1" 200 -
+2024-08-24 01:09:45,947 - INFO - Entering get_single_record function
+2024-08-24 01:09:46,054 - INFO - BEGIN (implicit)
+2024-08-24 01:09:46,056 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info 
+WHERE user_info.emp_id IS NULL
+2024-08-24 01:09:46,056 - INFO - [generated in 0.00021s] {}
+2024-08-24 01:09:46,063 - INFO - Total records fetched: 0
+2024-08-24 01:09:46,063 - INFO - ROLLBACK
+2024-08-24 01:09:46,063 - INFO - Exiting get_single_record function
+2024-08-24 01:09:46,064 - INFO - 127.0.0.1 - - [24/Aug/2024 01:09:46] "GET /get-emp-id HTTP/1.1" 200 -
+2024-08-24 01:10:07,771 - INFO - 127.0.0.1 - - [24/Aug/2024 01:10:07] "[33mGET /get-emp-id==1 HTTP/1.1[0m" 404 -
+2024-08-24 01:10:13,543 - INFO - 127.0.0.1 - - [24/Aug/2024 01:10:13] "[33mGET /get-emp-id=1 HTTP/1.1[0m" 404 -
+2024-08-24 01:10:22,923 - INFO - Entering get_single_record function
+2024-08-24 01:10:23,058 - INFO - BEGIN (implicit)
+2024-08-24 01:10:23,058 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info 
+WHERE user_info.emp_id IS NULL
+2024-08-24 01:10:23,058 - INFO - [cached since 37s ago] {}
+2024-08-24 01:10:23,063 - INFO - Total records fetched: 0
+2024-08-24 01:10:23,063 - INFO - ROLLBACK
+2024-08-24 01:10:23,064 - INFO - Exiting get_single_record function
+2024-08-24 01:10:23,064 - INFO - 127.0.0.1 - - [24/Aug/2024 01:10:23] "GET /get-emp-id?1 HTTP/1.1" 200 -
+2024-08-24 01:11:34,489 - INFO - Entering get_single_record function
+2024-08-24 01:11:34,585 - INFO - BEGIN (implicit)
+2024-08-24 01:11:34,586 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info 
+WHERE user_info.emp_id = %(emp_id_1)s
+2024-08-24 01:11:34,586 - INFO - [generated in 0.00022s] {'emp_id_1': '1'}
+2024-08-24 01:11:34,591 - INFO - Total records fetched: 1
+2024-08-24 01:11:34,591 - INFO - ROLLBACK
+2024-08-24 01:11:34,591 - INFO - Exiting get_single_record function
+2024-08-24 01:11:34,591 - INFO - 127.0.0.1 - - [24/Aug/2024 01:11:34] "GET /get-emp-id?emp_id=1 HTTP/1.1" 200 -
+2024-08-24 01:12:26,133 - INFO - Entering get_emp_name function
+2024-08-24 01:12:26,274 - INFO - BEGIN (implicit)
+2024-08-24 01:12:26,275 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info 
+WHERE user_info.name = %(name_1)s
+2024-08-24 01:12:26,276 - INFO - [generated in 0.00046s] {'name_1': 'sai'}
+2024-08-24 01:12:26,284 - INFO - Total records fetched: 1
+2024-08-24 01:12:26,284 - INFO - ROLLBACK
+2024-08-24 01:12:26,285 - INFO - Exiting get_emp_name function
+2024-08-24 01:12:26,285 - INFO - 127.0.0.1 - - [24/Aug/2024 01:12:26] "GET /get-emp-name?emp_name=sai HTTP/1.1" 200 -
+2024-08-24 01:12:39,976 - INFO - Entering get_emp_name function
+2024-08-24 01:12:40,076 - INFO - BEGIN (implicit)
+2024-08-24 01:12:40,076 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info 
+WHERE user_info.name = %(name_1)s
+2024-08-24 01:12:40,077 - INFO - [cached since 13.8s ago] {'name_1': 'komal sai kiran'}
+2024-08-24 01:12:40,084 - INFO - Total records fetched: 0
+2024-08-24 01:12:40,084 - INFO - ROLLBACK
+2024-08-24 01:12:40,085 - INFO - Exiting get_emp_name function
+2024-08-24 01:12:40,086 - INFO - 127.0.0.1 - - [24/Aug/2024 01:12:40] "GET /get-emp-name?emp_name=komal%20sai%20kiran HTTP/1.1" 200 -
+2024-08-24 01:13:04,414 - INFO - Entering get_emp_name function
+2024-08-24 01:13:04,551 - INFO - BEGIN (implicit)
+2024-08-24 01:13:04,552 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info 
+WHERE user_info.name = %(name_1)s
+2024-08-24 01:13:04,552 - INFO - [cached since 38.28s ago] {'name_1': ' sai'}
+2024-08-24 01:13:04,558 - INFO - Total records fetched: 0
+2024-08-24 01:13:04,558 - INFO - ROLLBACK
+2024-08-24 01:13:04,559 - INFO - Exiting get_emp_name function
+2024-08-24 01:13:04,559 - INFO - 127.0.0.1 - - [24/Aug/2024 01:13:04] "GET /get-emp-name?emp_name=%20sai HTTP/1.1" 200 -
+2024-08-24 01:13:10,088 - INFO - Entering get_emp_name function
+2024-08-24 01:13:10,224 - INFO - BEGIN (implicit)
+2024-08-24 01:13:10,225 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info 
+WHERE user_info.name = %(name_1)s
+2024-08-24 01:13:10,225 - INFO - [cached since 43.95s ago] {'name_1': 'sai'}
+2024-08-24 01:13:10,231 - INFO - Total records fetched: 1
+2024-08-24 01:13:10,232 - INFO - ROLLBACK
+2024-08-24 01:13:10,233 - INFO - Exiting get_emp_name function
+2024-08-24 01:13:10,234 - INFO - 127.0.0.1 - - [24/Aug/2024 01:13:10] "GET /get-emp-name?emp_name=sai HTTP/1.1" 200 -
+2024-08-24 01:14:26,305 - INFO -  * Detected change in 'C:\\Users\\lenovo\\PycharmProjects\\user_app\\apps\\app.py', reloading
+2024-08-24 01:14:26,490 - INFO -  * Restarting with stat
+2024-08-24 01:14:27,566 - INFO - select pg_catalog.version()
+2024-08-24 01:14:27,566 - INFO - [raw sql] {}
+2024-08-24 01:14:27,567 - INFO - select current_schema()
+2024-08-24 01:14:27,567 - INFO - [raw sql] {}
+2024-08-24 01:14:27,568 - INFO - show standard_conforming_strings
+2024-08-24 01:14:27,568 - INFO - [raw sql] {}
+2024-08-24 01:14:27,569 - INFO - BEGIN (implicit)
+2024-08-24 01:14:27,572 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 01:14:27,572 - INFO - [generated in 0.00022s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 01:14:27,575 - INFO - COMMIT
+2024-08-24 01:14:27,598 - WARNING -  * Debugger is active!
+2024-08-24 01:14:27,601 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 01:14:45,720 - INFO - Entering get_single_record function
+2024-08-24 01:14:45,818 - INFO - BEGIN (implicit)
+2024-08-24 01:14:45,823 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info 
+WHERE user_info.emp_id = %(emp_id_1)s
+2024-08-24 01:14:45,824 - INFO - [generated in 0.00066s] {'emp_id_1': '1'}
+2024-08-24 01:14:45,828 - INFO - Total records fetched: 1
+2024-08-24 01:14:49,355 - INFO - ROLLBACK
+2024-08-24 01:14:49,357 - INFO - Exiting get_single_record function
+2024-08-24 01:14:49,358 - INFO - 127.0.0.1 - - [24/Aug/2024 01:14:49] "GET /get-emp-id?emp_id=1 HTTP/1.1" 200 -
+2024-08-24 01:17:11,909 - INFO -  * Detected change in 'C:\\Users\\lenovo\\PycharmProjects\\user_app\\apps\\app.py', reloading
+2024-08-24 01:17:12,110 - INFO -  * Restarting with stat
+2024-08-24 01:17:13,035 - INFO - select pg_catalog.version()
+2024-08-24 01:17:13,035 - INFO - [raw sql] {}
+2024-08-24 01:17:13,037 - INFO - select current_schema()
+2024-08-24 01:17:13,037 - INFO - [raw sql] {}
+2024-08-24 01:17:13,037 - INFO - show standard_conforming_strings
+2024-08-24 01:17:13,037 - INFO - [raw sql] {}
+2024-08-24 01:17:13,039 - INFO - BEGIN (implicit)
+2024-08-24 01:17:13,042 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 01:17:13,042 - INFO - [generated in 0.00030s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 01:17:13,045 - INFO - COMMIT
+2024-08-24 01:17:13,066 - WARNING -  * Debugger is active!
+2024-08-24 01:17:13,071 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 01:17:18,045 - INFO - Entering get_emp_name function
+2024-08-24 01:17:18,155 - INFO - BEGIN (implicit)
+2024-08-24 01:17:18,157 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info 
+WHERE user_info.name = %(name_1)s
+2024-08-24 01:17:18,157 - INFO - [generated in 0.00020s] {'name_1': 'sai'}
+2024-08-24 01:17:18,161 - INFO - Total records fetched: 1
+2024-08-24 01:17:22,408 - INFO - ROLLBACK
+2024-08-24 01:17:22,411 - INFO - Exiting get_emp_name function
+2024-08-24 01:17:22,412 - INFO - 127.0.0.1 - - [24/Aug/2024 01:17:22] "GET /get-emp-name?emp_name=sai HTTP/1.1" 200 -
+2024-08-24 01:19:17,240 - INFO -  * Detected change in 'C:\\Users\\lenovo\\PycharmProjects\\user_app\\apps\\app.py', reloading
+2024-08-24 01:19:17,386 - INFO -  * Restarting with stat
+2024-08-24 01:19:19,007 - INFO - select pg_catalog.version()
+2024-08-24 01:19:19,007 - INFO - [raw sql] {}
+2024-08-24 01:19:19,014 - INFO - select current_schema()
+2024-08-24 01:19:19,014 - INFO - [raw sql] {}
+2024-08-24 01:19:19,017 - INFO - show standard_conforming_strings
+2024-08-24 01:19:19,017 - INFO - [raw sql] {}
+2024-08-24 01:19:19,019 - INFO - BEGIN (implicit)
+2024-08-24 01:19:19,027 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 01:19:19,027 - INFO - [generated in 0.00050s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 01:19:19,035 - INFO - COMMIT
+2024-08-24 01:19:19,106 - WARNING -  * Debugger is active!
+2024-08-24 01:19:19,114 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 01:20:02,056 - INFO - Entering get_kids function
+2024-08-24 01:20:02,163 - INFO - BEGIN (implicit)
+2024-08-24 01:20:02,168 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info 
+WHERE user_info.age < %(age_1)s
+2024-08-24 01:20:02,168 - INFO - [generated in 0.00047s] {'age_1': 15}
+2024-08-24 01:20:02,178 - INFO - Total records fetched: 0
+2024-08-24 01:20:05,572 - INFO - ROLLBACK
+2024-08-24 01:20:05,574 - INFO - Exiting get_kids function
+2024-08-24 01:20:05,575 - INFO - 127.0.0.1 - - [24/Aug/2024 01:20:05] "GET /get-kids HTTP/1.1" 200 -
+2024-08-24 01:21:05,860 - INFO - Entering create_user function
+2024-08-24 01:21:05,975 - INFO - BEGIN (implicit)
+2024-08-24 01:21:05,977 - INFO - INSERT INTO user_info (emp_id, age, name, exp, gender, dept, country) VALUES (%(emp_id)s, %(age)s, %(name)s, %(exp)s, %(gender)s, %(dept)s, %(country)s)
+2024-08-24 01:21:05,978 - INFO - [generated in 0.00041s] {'emp_id': 2, 'age': 10, 'name': 'kiran', 'exp': 0.0, 'gender': 'Male', 'dept': 'School', 'country': 'INDIA'}
+2024-08-24 01:21:06,011 - INFO - ROLLBACK
+2024-08-24 01:21:06,011 - ERROR - Error creating user: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "user_info_pkey"
+DETAIL:  Key (emp_id)=(2) already exists.
+
+[SQL: INSERT INTO user_info (emp_id, age, name, exp, gender, dept, country) VALUES (%(emp_id)s, %(age)s, %(name)s, %(exp)s, %(gender)s, %(dept)s, %(country)s)]
+[parameters: {'emp_id': 2, 'age': 10, 'name': 'kiran', 'exp': 0.0, 'gender': 'Male', 'dept': 'School', 'country': 'INDIA'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-08-24 01:21:09,433 - INFO - Exiting create_user function
+2024-08-24 01:21:09,435 - INFO - 127.0.0.1 - - [24/Aug/2024 01:21:09] "[35m[1mPOST /create_user HTTP/1.1[0m" 500 -
+2024-08-24 01:21:22,834 - INFO - Entering create_user function
+2024-08-24 01:21:22,944 - INFO - BEGIN (implicit)
+2024-08-24 01:21:22,945 - INFO - INSERT INTO user_info (emp_id, age, name, exp, gender, dept, country) VALUES (%(emp_id)s, %(age)s, %(name)s, %(exp)s, %(gender)s, %(dept)s, %(country)s)
+2024-08-24 01:21:22,945 - INFO - [cached since 16.97s ago] {'emp_id': 3, 'age': 10, 'name': 'kiran', 'exp': 0.0, 'gender': 'Male', 'dept': 'School', 'country': 'INDIA'}
+2024-08-24 01:21:22,951 - INFO - COMMIT
+2024-08-24 01:21:22,955 - INFO - User kiran created successfully
+2024-08-24 01:21:26,301 - INFO - Exiting create_user function
+2024-08-24 01:21:26,302 - INFO - 127.0.0.1 - - [24/Aug/2024 01:21:26] "[35m[1mPOST /create_user HTTP/1.1[0m" 201 -
+2024-08-24 01:21:33,191 - INFO - Entering get_kids function
+2024-08-24 01:21:33,285 - INFO - BEGIN (implicit)
+2024-08-24 01:21:33,286 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info 
+WHERE user_info.age < %(age_1)s
+2024-08-24 01:21:33,286 - INFO - [cached since 91.12s ago] {'age_1': 15}
+2024-08-24 01:21:33,290 - INFO - Total records fetched: 1
+2024-08-24 01:21:36,624 - INFO - ROLLBACK
+2024-08-24 01:21:36,626 - INFO - Exiting get_kids function
+2024-08-24 01:21:36,627 - INFO - 127.0.0.1 - - [24/Aug/2024 01:21:36] "GET /get-kids HTTP/1.1" 200 -
+2024-08-24 01:23:14,533 - INFO -  * Detected change in 'C:\\Users\\lenovo\\PycharmProjects\\user_app\\apps\\app.py', reloading
+2024-08-24 01:23:14,737 - INFO -  * Restarting with stat
+2024-08-24 01:23:15,793 - INFO - select pg_catalog.version()
+2024-08-24 01:23:15,794 - INFO - [raw sql] {}
+2024-08-24 01:23:15,795 - INFO - select current_schema()
+2024-08-24 01:23:15,795 - INFO - [raw sql] {}
+2024-08-24 01:23:15,796 - INFO - show standard_conforming_strings
+2024-08-24 01:23:15,796 - INFO - [raw sql] {}
+2024-08-24 01:23:15,797 - INFO - BEGIN (implicit)
+2024-08-24 01:23:15,801 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 01:23:15,801 - INFO - [generated in 0.00029s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 01:23:15,806 - INFO - COMMIT
+2024-08-24 01:23:15,829 - WARNING -  * Debugger is active!
+2024-08-24 01:23:15,832 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 01:23:30,265 - INFO - Entering get_experience_less_than_5 function
+2024-08-24 01:23:30,378 - INFO - BEGIN (implicit)
+2024-08-24 01:23:30,383 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info 
+WHERE user_info.exp < %(exp_1)s
+2024-08-24 01:23:30,383 - INFO - [generated in 0.00074s] {'exp_1': 5}
+2024-08-24 01:23:30,393 - INFO - Total records fetched: 1
+2024-08-24 01:23:34,291 - INFO - ROLLBACK
+2024-08-24 01:23:34,292 - INFO - Exiting get_experience_less_than_5 function
+2024-08-24 01:23:34,292 - INFO - 127.0.0.1 - - [24/Aug/2024 01:23:34] "GET /get-experience-less-than-5 HTTP/1.1" 200 -
+2024-08-24 01:24:44,251 - INFO -  * Detected change in 'C:\\Users\\lenovo\\PycharmProjects\\user_app\\apps\\app.py', reloading
+2024-08-24 01:24:44,462 - INFO -  * Restarting with stat
+2024-08-24 01:24:45,603 - INFO - select pg_catalog.version()
+2024-08-24 01:24:45,603 - INFO - [raw sql] {}
+2024-08-24 01:24:45,604 - INFO - select current_schema()
+2024-08-24 01:24:45,605 - INFO - [raw sql] {}
+2024-08-24 01:24:45,605 - INFO - show standard_conforming_strings
+2024-08-24 01:24:45,605 - INFO - [raw sql] {}
+2024-08-24 01:24:45,606 - INFO - BEGIN (implicit)
+2024-08-24 01:24:45,609 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 01:24:45,610 - INFO - [generated in 0.00028s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 01:24:45,612 - INFO - COMMIT
+2024-08-24 01:24:45,635 - WARNING -  * Debugger is active!
+2024-08-24 01:24:45,637 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 01:25:01,530 - INFO - Entering get_users_from_india function
+2024-08-24 01:25:01,647 - INFO - BEGIN (implicit)
+2024-08-24 01:25:01,652 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info 
+WHERE user_info.country = %(country_1)s
+2024-08-24 01:25:01,652 - INFO - [generated in 0.00059s] {'country_1': 'India'}
+2024-08-24 01:25:01,659 - INFO - Total records fetched: 0
+2024-08-24 01:25:05,187 - INFO - ROLLBACK
+2024-08-24 01:25:05,189 - INFO - Exiting get_users_from_india function
+2024-08-24 01:25:05,191 - INFO - 127.0.0.1 - - [24/Aug/2024 01:25:05] "GET /get-users-from-india HTTP/1.1" 200 -
+2024-08-24 01:25:31,329 - INFO - 127.0.0.1 - - [24/Aug/2024 01:25:31] "[33mGET /get-users-from-INDIA HTTP/1.1[0m" 404 -
+2024-08-24 01:25:48,392 - INFO -  * Detected change in 'C:\\Users\\lenovo\\PycharmProjects\\user_app\\apps\\app.py', reloading
+2024-08-24 01:25:48,606 - INFO -  * Restarting with stat
+2024-08-24 01:25:49,791 - INFO - select pg_catalog.version()
+2024-08-24 01:25:49,792 - INFO - [raw sql] {}
+2024-08-24 01:25:49,794 - INFO - select current_schema()
+2024-08-24 01:25:49,795 - INFO - [raw sql] {}
+2024-08-24 01:25:49,796 - INFO - show standard_conforming_strings
+2024-08-24 01:25:49,796 - INFO - [raw sql] {}
+2024-08-24 01:25:49,798 - INFO - BEGIN (implicit)
+2024-08-24 01:25:49,806 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 01:25:49,806 - INFO - [generated in 0.00060s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 01:25:49,813 - INFO - COMMIT
+2024-08-24 01:25:49,866 - WARNING -  * Debugger is active!
+2024-08-24 01:25:49,871 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 01:25:49,914 - INFO - Entering get_users_from_india function
+2024-08-24 01:25:49,978 - INFO - BEGIN (implicit)
+2024-08-24 01:25:49,980 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info 
+WHERE user_info.country = %(country_1)s
+2024-08-24 01:25:49,980 - INFO - [generated in 0.00019s] {'country_1': 'INDIA'}
+2024-08-24 01:25:49,984 - INFO - Total records fetched: 3
+2024-08-24 01:25:53,474 - INFO - ROLLBACK
+2024-08-24 01:25:53,476 - INFO - Exiting get_users_from_india function
+2024-08-24 01:25:53,477 - INFO - 127.0.0.1 - - [24/Aug/2024 01:25:53] "GET /get-users-from-india HTTP/1.1" 200 -
+2024-08-24 01:27:46,373 - INFO -  * Detected change in 'C:\\Users\\lenovo\\PycharmProjects\\user_app\\apps\\app.py', reloading
+2024-08-24 01:27:46,554 - INFO -  * Restarting with stat
+2024-08-24 01:27:47,508 - INFO - select pg_catalog.version()
+2024-08-24 01:27:47,508 - INFO - [raw sql] {}
+2024-08-24 01:27:47,509 - INFO - select current_schema()
+2024-08-24 01:27:47,510 - INFO - [raw sql] {}
+2024-08-24 01:27:47,510 - INFO - show standard_conforming_strings
+2024-08-24 01:27:47,510 - INFO - [raw sql] {}
+2024-08-24 01:27:47,511 - INFO - BEGIN (implicit)
+2024-08-24 01:27:47,515 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 01:27:47,515 - INFO - [generated in 0.00040s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 01:27:47,518 - INFO - COMMIT
+2024-08-24 01:27:47,543 - WARNING -  * Debugger is active!
+2024-08-24 01:27:47,547 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 01:28:31,182 - INFO - Entering get_users_by_gender function
+2024-08-24 01:28:31,280 - INFO - BEGIN (implicit)
+2024-08-24 01:28:31,284 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info 
+WHERE user_info.gender = %(gender_1)s
+2024-08-24 01:28:31,284 - INFO - [generated in 0.00035s] {'gender_1': 'Male'}
+2024-08-24 01:28:31,290 - INFO - Total records fetched: 3
+2024-08-24 01:28:34,956 - INFO - ROLLBACK
+2024-08-24 01:28:34,958 - INFO - Exiting get_users_by_gender function
+2024-08-24 01:28:34,959 - INFO - 127.0.0.1 - - [24/Aug/2024 01:28:34] "GET /get-users-by-gender?gender=Male HTTP/1.1" 200 -
+2024-08-24 01:30:28,063 - INFO -  * Detected change in 'C:\\Users\\lenovo\\PycharmProjects\\user_app\\apps\\app.py', reloading
+2024-08-24 01:30:28,318 - INFO -  * Restarting with stat
+2024-08-24 01:30:29,378 - INFO - select pg_catalog.version()
+2024-08-24 01:30:29,378 - INFO - [raw sql] {}
+2024-08-24 01:30:29,379 - INFO - select current_schema()
+2024-08-24 01:30:29,379 - INFO - [raw sql] {}
+2024-08-24 01:30:29,379 - INFO - show standard_conforming_strings
+2024-08-24 01:30:29,380 - INFO - [raw sql] {}
+2024-08-24 01:30:29,381 - INFO - BEGIN (implicit)
+2024-08-24 01:30:29,384 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 01:30:29,384 - INFO - [generated in 0.00026s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 01:30:29,387 - INFO - COMMIT
+2024-08-24 01:30:29,409 - WARNING -  * Debugger is active!
+2024-08-24 01:30:29,411 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 01:30:50,113 - INFO - Entering get_users_by_name function
+2024-08-24 01:30:50,218 - INFO - BEGIN (implicit)
+2024-08-24 01:30:50,223 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info 
+WHERE user_info.name ILIKE %(name_1)s
+2024-08-24 01:30:50,223 - INFO - [generated in 0.00043s] {'name_1': '%sai%'}
+2024-08-24 01:30:50,239 - INFO - Total records fetched: 2
+2024-08-24 01:30:53,742 - INFO - ROLLBACK
+2024-08-24 01:30:53,743 - INFO - Exiting get_users_by_name function
+2024-08-24 01:30:53,743 - INFO - 127.0.0.1 - - [24/Aug/2024 01:30:53] "GET /get-users-by-name?name=sai HTTP/1.1" 200 -

@@ -50,6 +50,27 @@ create_tables()
 Session = sessionmaker(bind=engine)
 
 
+def serialize_record(record):
+    """
+    Serializes a SQLAlchemy record to a dictionary, excluding internal state.
+    """
+    record_dict = record.__dict__
+    record_dict.pop('_sa_instance_state', None)
+    return record_dict
+
+
+def exclude_columns(record_dict):
+    """
+    Excludes specified columns from the user dictionary.
+
+    :param record_dict: Dictionary containing user data
+    :return: Dictionary with specified columns excluded
+    """
+    exclude = []  # Specify columns to exclude here
+    final_dict = {key: value for key, value in record_dict.items() if key not in exclude}
+    return final_dict
+
+
 @app.route('/get_all_records', methods=["GET"])
 def get_records():
     """
@@ -59,9 +80,7 @@ def get_records():
     log_info("Entering get_records function")
     try:
         result = session.query(UserInfo).all()
-        response = [user.__dict__ for user in result]
-        for user in response:
-            user.pop('_sa_instance_state', None)
+        response = [serialize_record(user) for user in result]
         log_info("Fetched all user records successfully")
         notify_success("Records fetched", "All user records have been successfully fetched.")
         return jsonify(response)
@@ -83,7 +102,7 @@ def get_custom_columns():
     log_info("Entering get_custom_columns function")
     try:
         result = session.query(UserInfo).all()
-        response = [exclude_columns(user.__dict__) for user in result]
+        response = [exclude_columns(serialize_record(user)) for user in result]
         log_info("Fetched custom columns successfully")
         notify_success("Custom columns fetched",
                        "User records with custom columns excluded have been successfully fetched.")
@@ -95,20 +114,6 @@ def get_custom_columns():
     finally:
         session.close()
         log_info("Exiting get_custom_columns function")
-
-
-def exclude_columns(user_dict):
-    """
-    Excludes specified columns from the user dictionary.
-
-    This function removes specified columns from the user dictionary before returning it.
-
-    :param user_dict: Dictionary containing user data
-    :return: Dictionary with specified columns excluded
-    """
-    exclude = ['_sa_instance_state']  # Specify columns to exclude here
-    final_dict = {key: user_dict[key] for key in user_dict if key not in exclude}
-    return final_dict
 
 
 @app.route('/create_user', methods=["POST"])
@@ -250,6 +255,195 @@ def get_docs():
     return jsonify({"documentation": documentation})
 
 
+@app.route('/get_records', methods=["GET"])
+def fetch_records():
+    """
+    Retrieves all user records from the database.
+    """
+    session = Session()
+    log_info("Entering fetch_records function")
+    try:
+        result = session.query(UserInfo).all()
+        response = [serialize_record(item) for item in result]
+        log_info(f"Total records fetched: {len(response)}")
+        notify_success("User Record", f"User{response} Records has been Fetched successfully.")
+        return jsonify(response)
+    except Exception as e:
+        log_error(f"Error fetching records: {str(e)}")
+        notify_failure("Error fetching records", str(e))
+        return jsonify({"message": "Error fetching records", "error": str(e)}), 500
+    finally:
+        session.close()
+        log_info("Exiting fetch_records function")
+
+
+@app.route('/get-emp-id', methods=["GET"])
+def get_single_record():
+    """
+    Retrieves a user record based on Employee ID.
+    """
+    emp_id = request.args.get('emp_id')
+    session = Session()
+    log_info("Entering get_single_record function")
+    try:
+        result = session.query(UserInfo).filter(UserInfo.EmployeeID == emp_id).all()
+        response = [serialize_record(item) for item in result]
+        log_info(f"Total records fetched: {len(response)}")
+        notify_success("User Single Record", f"User{response} Records has been Fetched successfully.")
+        return jsonify(response)
+    except Exception as e:
+        log_error(f"Error fetching record by ID: {str(e)}")
+        notify_failure("Error fetching record by ID", str(e))
+        return jsonify({"message": "Error fetching record by ID", "error": str(e)}), 500
+    finally:
+        session.close()
+        log_info("Exiting get_single_record function")
+
+
+@app.route('/get-experience-less-than-5', methods=["GET"])
+def get_experience_less_than_5():
+    """
+    Retrieves user records with experience less than 5 years.
+    """
+    session = Session()
+    log_info("Entering get_experience_less_than_5 function")
+    try:
+        result = session.query(UserInfo).filter(UserInfo.Exp < 5).all()
+        response = [serialize_record(item) for item in result]
+        log_info(f"Total records fetched: {len(response)}")
+        notify_success("User Experience Records",
+                       f"Users with less than 5 years of experience have been fetched successfully.")
+        return jsonify(response)
+    except Exception as e:
+        log_error(f"Error fetching records with experience less than 5 years: {str(e)}")
+        notify_failure("Error fetching records with experience less than 5 years", str(e))
+        return jsonify({"message": "Error fetching records with experience less than 5 years", "error": str(e)}), 500
+    finally:
+        session.close()
+        log_info("Exiting get_experience_less_than_5 function")
+
+
+@app.route('/get-users-from-india', methods=["GET"])
+def get_users_from_india():
+    """
+    Retrieves user records where the country is India.
+    """
+    session = Session()
+    log_info("Entering get_users_from_india function")
+    try:
+        result = session.query(UserInfo).filter(UserInfo.Country == 'INDIA').all()
+        response = [serialize_record(item) for item in result]
+        log_info(f"Total records fetched: {len(response)}")
+        notify_success("User Records from India", "Users from India have been fetched successfully.")
+        return jsonify(response)
+    except Exception as e:
+        log_error(f"Error fetching records from India: {str(e)}")
+        notify_failure("Error fetching records from India", str(e))
+        return jsonify({"message": "Error fetching records from India", "error": str(e)}), 500
+    finally:
+        session.close()
+        log_info("Exiting get_users_from_india function")
+
+
+@app.route('/get-users-by-gender', methods=["GET"])
+def get_users_by_gender():
+    """
+    Retrieves user records based on the specified gender.
+    """
+    gender = request.args.get('gender')
+    if not gender:
+        return jsonify({"message": "Gender parameter is required"}), 400
+
+    session = Session()
+    log_info("Entering get_users_by_gender function")
+    try:
+        result = session.query(UserInfo).filter(UserInfo.Gender == gender).all()
+        response = [serialize_record(item) for item in result]
+        log_info(f"Total records fetched: {len(response)}")
+        notify_success("User Records by Gender", f"Users with gender {gender} have been fetched successfully.")
+        return jsonify(response)
+    except Exception as e:
+        log_error(f"Error fetching records by gender: {str(e)}")
+        notify_failure("Error fetching records by gender", str(e))
+        return jsonify({"message": "Error fetching records by gender", "error": str(e)}), 500
+    finally:
+        session.close()
+        log_info("Exiting get_users_by_gender function")
+
+
+@app.route('/get-users-by-name', methods=["GET"])
+def get_users_by_name():
+    """
+    Retrieves user records based on the specified name.
+    """
+    name = request.args.get('name')
+    if not name:
+        return jsonify({"message": "Name parameter is required"}), 400
+
+    session = Session()
+    log_info("Entering get_users_by_name function")
+    try:
+        result = session.query(UserInfo).filter(UserInfo.Name.ilike(f'%{name}%')).all()
+        response = [serialize_record(item) for item in result]
+        log_info(f"Total records fetched: {len(response)}")
+        notify_success("User Records by Name", f"Users with name matching '{name}' have been fetched successfully.")
+        return jsonify(response)
+    except Exception as e:
+        log_error(f"Error fetching records by name: {str(e)}")
+        notify_failure("Error fetching records by name", str(e))
+        return jsonify({"message": "Error fetching records by name", "error": str(e)}), 500
+    finally:
+        session.close()
+        log_info("Exiting get_users_by_name function")
+
+
+@app.route('/get-emp-name', methods=["GET"])
+def get_emp_name():
+    """
+    Retrieves user records based on Employee Name.
+    """
+    emp_name = request.args.get('emp_name')
+    session = Session()
+    log_info("Entering get_emp_name function")
+    try:
+        result = session.query(UserInfo).filter(UserInfo.Name == emp_name).all()
+        response = [serialize_record(item) for item in result]
+        log_info(f"Total records fetched: {len(response)}")
+        notify_success("User Employee Name Record", f"User Employee Name{response} Records has been Fetched "
+                                                    f"successfully.")
+        return jsonify(response)
+    except Exception as e:
+        log_error(f"Error fetching record by Name: {str(e)}")
+        notify_failure("Error fetching record by Name", str(e))
+        return jsonify({"message": "Error fetching record by Name", "error": str(e)}), 500
+    finally:
+        session.close()
+        log_info("Exiting get_emp_name function")
+
+
+@app.route('/get-kids', methods=["GET"])
+def get_kids():
+    """
+    Retrieves user records for those under 15 years of age.
+    """
+    session = Session()
+    log_info("Entering get_kids function")
+    try:
+        result = session.query(UserInfo).filter(UserInfo.Age < 15).all()
+        response = [serialize_record(item) for item in result]
+        log_info(f"Total records fetched: {len(response)}")
+        notify_success("User kids Record", f"User Kids {response} Records has been Fetched "
+                                           f"successfully.")
+        return jsonify(response)
+    except Exception as e:
+        log_error(f"Error fetching kids records: {str(e)}")
+        notify_failure("Error fetching kids records", str(e))
+        return jsonify({"message": "Error fetching kids records", "error": str(e)}), 500
+    finally:
+        session.close()
+        log_info("Exiting get_kids function")
+
+
 # Run the Flask app
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(debug=True)
