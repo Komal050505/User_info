@@ -723,3 +723,49 @@ WHERE user_info.name ILIKE %(name_1)s
 2024-08-24 01:30:53,742 - INFO - ROLLBACK
 2024-08-24 01:30:53,743 - INFO - Exiting get_users_by_name function
 2024-08-24 01:30:53,743 - INFO - 127.0.0.1 - - [24/Aug/2024 01:30:53] "GET /get-users-by-name?name=sai HTTP/1.1" 200 -
+2024-08-24 01:31:15,194 - INFO - Entering get_users_by_name function
+2024-08-24 01:31:15,301 - INFO - BEGIN (implicit)
+2024-08-24 01:31:15,302 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info 
+WHERE user_info.name ILIKE %(name_1)s
+2024-08-24 01:31:15,302 - INFO - [cached since 25.08s ago] {'name_1': '%sai kiran%'}
+2024-08-24 01:31:15,305 - INFO - Total records fetched: 1
+2024-08-24 01:31:18,773 - INFO - ROLLBACK
+2024-08-24 01:31:18,775 - INFO - Exiting get_users_by_name function
+2024-08-24 01:31:18,776 - INFO - 127.0.0.1 - - [24/Aug/2024 01:31:18] "GET /get-users-by-name?name=sai%20kiran HTTP/1.1" 200 -
+2024-08-24 01:37:13,959 - INFO -  * Detected change in 'C:\\Users\\lenovo\\PycharmProjects\\user_app\\apps\\app.py', reloading
+2024-08-24 01:37:14,178 - INFO -  * Restarting with stat
+2024-08-24 01:37:15,923 - INFO - select pg_catalog.version()
+2024-08-24 01:37:15,923 - INFO - [raw sql] {}
+2024-08-24 01:37:15,927 - INFO - select current_schema()
+2024-08-24 01:37:15,928 - INFO - [raw sql] {}
+2024-08-24 01:37:15,930 - INFO - show standard_conforming_strings
+2024-08-24 01:37:15,930 - INFO - [raw sql] {}
+2024-08-24 01:37:15,932 - INFO - BEGIN (implicit)
+2024-08-24 01:37:15,939 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 01:37:15,940 - INFO - [generated in 0.00057s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 01:37:15,949 - INFO - COMMIT
+2024-08-24 01:37:16,011 - WARNING -  * Debugger is active!
+2024-08-24 01:37:16,016 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 01:37:16,482 - INFO - Entering get_users_by_name function
+2024-08-24 01:37:16,588 - INFO - BEGIN (implicit)
+2024-08-24 01:37:16,591 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info 
+WHERE user_info.name ILIKE %(name_1)s
+2024-08-24 01:37:16,591 - INFO - [generated in 0.00034s] {'name_1': '%sai kiran%'}
+2024-08-24 01:37:16,600 - INFO - Total records fetched: 1
+2024-08-24 01:37:20,192 - INFO - ROLLBACK
+2024-08-24 01:37:20,193 - INFO - Exiting get_users_by_name function
+2024-08-24 01:37:20,194 - INFO - 127.0.0.1 - - [24/Aug/2024 01:37:20] "GET /get-users-by-name?name=sai%20kiran HTTP/1.1" 200 -
+2024-08-24 01:37:24,708 - INFO - Entering get_experience_less_than_5 function
+2024-08-24 01:37:24,801 - INFO - BEGIN (implicit)
+2024-08-24 01:37:24,802 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info 
+WHERE user_info.exp < %(exp_1)s
+2024-08-24 01:37:24,803 - INFO - [generated in 0.00029s] {'exp_1': 5}
+2024-08-24 01:37:24,810 - INFO - Total records fetched: 1
+2024-08-24 01:37:28,335 - INFO - ROLLBACK
+2024-08-24 01:37:28,336 - INFO - Exiting get_experience_less_than_5 function
+2024-08-24 01:37:28,338 - INFO - 127.0.0.1 - - [24/Aug/2024 01:37:28] "GET /get-experience-less-than-5 HTTP/1.1" 200 -
