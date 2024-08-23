@@ -1,0 +1,6 @@
+psycopg2~=2.9.9
+Flask~=3.0.3
+psycopg2
+sqlalchemy
+flask
+flask_restful

@@ -1,0 +1,285 @@
+2024-08-24 00:17:21,659 - INFO - select pg_catalog.version()
+2024-08-24 00:17:21,659 - INFO - [raw sql] {}
+2024-08-24 00:17:21,661 - INFO - select current_schema()
+2024-08-24 00:17:21,662 - INFO - [raw sql] {}
+2024-08-24 00:17:21,662 - INFO - show standard_conforming_strings
+2024-08-24 00:17:21,663 - INFO - [raw sql] {}
+2024-08-24 00:17:21,663 - INFO - BEGIN (implicit)
+2024-08-24 00:17:21,668 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 00:17:21,669 - INFO - [generated in 0.00057s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 00:17:21,673 - INFO - COMMIT
+2024-08-24 00:17:21,695 - WARNING -  * Debugger is active!
+2024-08-24 00:17:21,701 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 00:17:21,746 - INFO - Entering update_user function
+2024-08-24 00:17:21,807 - INFO - BEGIN (implicit)
+2024-08-24 00:17:21,809 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info 
+WHERE user_info.emp_id = %(emp_id_1)s 
+ LIMIT %(param_1)s
+2024-08-24 00:17:21,810 - INFO - [generated in 0.00020s] {'emp_id_1': 1, 'param_1': 1}
+2024-08-24 00:17:21,812 - INFO - COMMIT
+2024-08-24 00:17:21,813 - INFO - User 1 updated successfully
+2024-08-24 00:17:21,813 - INFO - Exiting update_user function
+2024-08-24 00:17:21,814 - INFO - 127.0.0.1 - - [24/Aug/2024 00:17:21] "PUT /update_user/1 HTTP/1.1" 200 -
+2024-08-24 00:18:38,214 - INFO -  * Detected change in 'C:\\Users\\lenovo\\PycharmProjects\\user_app\\apps\\app.py', reloading
+2024-08-24 00:18:39,043 - INFO - select pg_catalog.version()
+2024-08-24 00:18:39,043 - INFO - [raw sql] {}
+2024-08-24 00:18:39,044 - INFO - select current_schema()
+2024-08-24 00:18:39,044 - INFO - [raw sql] {}
+2024-08-24 00:18:39,044 - INFO - show standard_conforming_strings
+2024-08-24 00:18:39,044 - INFO - [raw sql] {}
+2024-08-24 00:18:39,046 - INFO - BEGIN (implicit)
+2024-08-24 00:18:39,050 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 00:18:39,050 - INFO - [generated in 0.00043s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 00:18:39,052 - INFO - COMMIT
+2024-08-24 00:18:39,071 - WARNING -  * Debugger is active!
+2024-08-24 00:18:39,074 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 00:19:28,660 - INFO -  * Detected change in 'C:\\Users\\lenovo\\PycharmProjects\\user_app\\apps\\app.py', reloading
+2024-08-24 00:19:29,943 - INFO - select pg_catalog.version()
+2024-08-24 00:19:29,943 - INFO - [raw sql] {}
+2024-08-24 00:19:29,944 - INFO - select current_schema()
+2024-08-24 00:19:29,944 - INFO - [raw sql] {}
+2024-08-24 00:19:29,945 - INFO - show standard_conforming_strings
+2024-08-24 00:19:29,945 - INFO - [raw sql] {}
+2024-08-24 00:19:29,947 - INFO - BEGIN (implicit)
+2024-08-24 00:19:29,951 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 00:19:29,951 - INFO - [generated in 0.00039s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 00:19:29,955 - INFO - COMMIT
+2024-08-24 00:19:29,984 - WARNING -  * Debugger is active!
+2024-08-24 00:19:29,988 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 00:24:39,180 - INFO -  * Detected change in 'C:\\Users\\lenovo\\PycharmProjects\\user_app\\apps\\app.py', reloading
+2024-08-24 00:24:40,332 - INFO - select pg_catalog.version()
+2024-08-24 00:24:40,332 - INFO - [raw sql] {}
+2024-08-24 00:24:40,334 - INFO - select current_schema()
+2024-08-24 00:24:40,334 - INFO - [raw sql] {}
+2024-08-24 00:24:40,335 - INFO - show standard_conforming_strings
+2024-08-24 00:24:40,335 - INFO - [raw sql] {}
+2024-08-24 00:24:40,335 - INFO - BEGIN (implicit)
+2024-08-24 00:24:40,339 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 00:24:40,339 - INFO - [generated in 0.00024s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 00:24:40,343 - INFO - COMMIT
+2024-08-24 00:24:40,366 - WARNING -  * Debugger is active!
+2024-08-24 00:24:40,369 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 00:24:56,689 - INFO - 127.0.0.1 - - [24/Aug/2024 00:24:56] "GET /get_docs HTTP/1.1" 200 -
+2024-08-24 00:37:56,215 - INFO - select pg_catalog.version()
+2024-08-24 00:37:56,215 - INFO - [raw sql] {}
+2024-08-24 00:37:56,216 - INFO - select current_schema()
+2024-08-24 00:37:56,216 - INFO - [raw sql] {}
+2024-08-24 00:37:56,216 - INFO - show standard_conforming_strings
+2024-08-24 00:37:56,216 - INFO - [raw sql] {}
+2024-08-24 00:37:56,217 - INFO - BEGIN (implicit)
+2024-08-24 00:37:56,220 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 00:37:56,220 - INFO - [generated in 0.00021s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 00:37:56,229 - INFO - COMMIT
+2024-08-24 00:37:56,310 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-08-24 00:37:56,310 - INFO - [33mPress CTRL+C to quit[0m
+2024-08-24 00:37:56,312 - INFO -  * Restarting with stat
+2024-08-24 00:37:57,190 - INFO - select pg_catalog.version()
+2024-08-24 00:37:57,190 - INFO - [raw sql] {}
+2024-08-24 00:37:57,191 - INFO - select current_schema()
+2024-08-24 00:37:57,191 - INFO - [raw sql] {}
+2024-08-24 00:37:57,192 - INFO - show standard_conforming_strings
+2024-08-24 00:37:57,192 - INFO - [raw sql] {}
+2024-08-24 00:37:57,193 - INFO - BEGIN (implicit)
+2024-08-24 00:37:57,196 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 00:37:57,196 - INFO - [generated in 0.00035s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 00:37:57,199 - INFO - COMMIT
+2024-08-24 00:37:57,220 - WARNING -  * Debugger is active!
+2024-08-24 00:37:57,223 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 00:39:17,669 - INFO -  * Detected change in 'C:\\Users\\lenovo\\PycharmProjects\\user_app\\apps\\app.py', reloading
+2024-08-24 00:39:17,883 - INFO -  * Restarting with stat
+2024-08-24 00:39:19,192 - INFO - select pg_catalog.version()
+2024-08-24 00:39:19,193 - INFO - [raw sql] {}
+2024-08-24 00:39:19,195 - INFO - select current_schema()
+2024-08-24 00:39:19,195 - INFO - [raw sql] {}
+2024-08-24 00:39:19,196 - INFO - show standard_conforming_strings
+2024-08-24 00:39:19,197 - INFO - [raw sql] {}
+2024-08-24 00:39:19,199 - INFO - BEGIN (implicit)
+2024-08-24 00:39:19,204 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 00:39:19,204 - INFO - [generated in 0.00045s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 00:39:19,210 - INFO - COMMIT
+2024-08-24 00:39:19,242 - WARNING -  * Debugger is active!
+2024-08-24 00:39:19,246 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 00:39:59,062 - INFO - select pg_catalog.version()
+2024-08-24 00:39:59,062 - INFO - [raw sql] {}
+2024-08-24 00:39:59,063 - INFO - select current_schema()
+2024-08-24 00:39:59,063 - INFO - [raw sql] {}
+2024-08-24 00:39:59,063 - INFO - show standard_conforming_strings
+2024-08-24 00:39:59,063 - INFO - [raw sql] {}
+2024-08-24 00:39:59,065 - INFO - BEGIN (implicit)
+2024-08-24 00:39:59,069 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 00:39:59,069 - INFO - [generated in 0.00031s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 00:39:59,071 - INFO - COMMIT
+2024-08-24 00:39:59,110 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-08-24 00:39:59,111 - INFO - [33mPress CTRL+C to quit[0m
+2024-08-24 00:39:59,112 - INFO -  * Restarting with stat
+2024-08-24 00:39:59,978 - INFO - select pg_catalog.version()
+2024-08-24 00:39:59,978 - INFO - [raw sql] {}
+2024-08-24 00:39:59,979 - INFO - select current_schema()
+2024-08-24 00:39:59,979 - INFO - [raw sql] {}
+2024-08-24 00:39:59,979 - INFO - show standard_conforming_strings
+2024-08-24 00:39:59,979 - INFO - [raw sql] {}
+2024-08-24 00:39:59,980 - INFO - BEGIN (implicit)
+2024-08-24 00:39:59,983 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 00:39:59,984 - INFO - [generated in 0.00027s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 00:39:59,986 - INFO - COMMIT
+2024-08-24 00:40:00,005 - WARNING -  * Debugger is active!
+2024-08-24 00:40:00,010 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 00:40:04,981 - INFO - Entering create_user function
+2024-08-24 00:40:05,158 - INFO - BEGIN (implicit)
+2024-08-24 00:40:05,162 - INFO - INSERT INTO user_info (emp_id, age, name, exp, gender, dept, country) VALUES (%(emp_id)s, %(age)s, %(name)s, %(exp)s, %(gender)s, %(dept)s, %(country)s)
+2024-08-24 00:40:05,162 - INFO - [generated in 0.00058s] {'emp_id': 2, 'age': 25, 'name': 'sai', 'exp': 5.0, 'gender': 'Male', 'dept': 'Engineering', 'country': 'INDIA'}
+2024-08-24 00:40:05,183 - INFO - COMMIT
+2024-08-24 00:40:05,188 - INFO - User sai created successfully
+2024-08-24 00:40:11,829 - INFO - Exiting create_user function
+2024-08-24 00:40:11,830 - INFO - 127.0.0.1 - - [24/Aug/2024 00:40:11] "[35m[1mPOST /create_user HTTP/1.1[0m" 201 -
+2024-08-24 00:40:52,593 - INFO - 127.0.0.1 - - [24/Aug/2024 00:40:52] "[33mGET /get_all_records HTTP/1.1[0m" 404 -
+2024-08-24 00:41:00,026 - INFO - 127.0.0.1 - - [24/Aug/2024 00:41:00] "[33mGET /get_all_records HTTP/1.1[0m" 404 -
+2024-08-24 00:41:10,154 - INFO - Entering get_custom_columns function
+2024-08-24 00:41:10,266 - INFO - BEGIN (implicit)
+2024-08-24 00:41:10,269 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info
+2024-08-24 00:41:10,269 - INFO - [generated in 0.00038s] {}
+2024-08-24 00:41:10,276 - INFO - Fetched custom columns successfully
+2024-08-24 00:41:14,702 - INFO - ROLLBACK
+2024-08-24 00:41:14,704 - INFO - Exiting get_custom_columns function
+2024-08-24 00:41:14,705 - INFO - 127.0.0.1 - - [24/Aug/2024 00:41:14] "GET /get_custom_columns HTTP/1.1" 200 -
+2024-08-24 00:41:40,131 - INFO - Entering update_user function
+2024-08-24 00:41:40,243 - INFO - BEGIN (implicit)
+2024-08-24 00:41:40,245 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info 
+WHERE user_info.emp_id = %(emp_id_1)s 
+ LIMIT %(param_1)s
+2024-08-24 00:41:40,245 - INFO - [generated in 0.00026s] {'emp_id_1': 1, 'param_1': 1}
+2024-08-24 00:41:40,253 - INFO - COMMIT
+2024-08-24 00:41:40,253 - INFO - User 1 updated successfully
+2024-08-24 00:41:44,807 - INFO - Exiting update_user function
+2024-08-24 00:41:44,809 - INFO - 127.0.0.1 - - [24/Aug/2024 00:41:44] "PUT /update_user/1 HTTP/1.1" 200 -
+2024-08-24 00:41:56,840 - INFO - 127.0.0.1 - - [24/Aug/2024 00:41:56] "[33mGET /get_all_records HTTP/1.1[0m" 404 -
+2024-08-24 00:43:04,549 - INFO - select pg_catalog.version()
+2024-08-24 00:43:04,549 - INFO - [raw sql] {}
+2024-08-24 00:43:04,550 - INFO - select current_schema()
+2024-08-24 00:43:04,550 - INFO - [raw sql] {}
+2024-08-24 00:43:04,551 - INFO - show standard_conforming_strings
+2024-08-24 00:43:04,551 - INFO - [raw sql] {}
+2024-08-24 00:43:04,552 - INFO - BEGIN (implicit)
+2024-08-24 00:43:04,556 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 00:43:04,557 - INFO - [generated in 0.00039s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 00:43:04,561 - INFO - COMMIT
+2024-08-24 00:43:04,601 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-08-24 00:43:04,601 - INFO - [33mPress CTRL+C to quit[0m
+2024-08-24 00:43:04,603 - INFO -  * Restarting with stat
+2024-08-24 00:43:05,682 - INFO - select pg_catalog.version()
+2024-08-24 00:43:05,683 - INFO - [raw sql] {}
+2024-08-24 00:43:05,686 - INFO - select current_schema()
+2024-08-24 00:43:05,688 - INFO - [raw sql] {}
+2024-08-24 00:43:05,689 - INFO - show standard_conforming_strings
+2024-08-24 00:43:05,690 - INFO - [raw sql] {}
+2024-08-24 00:43:05,692 - INFO - BEGIN (implicit)
+2024-08-24 00:43:05,713 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 00:43:05,713 - INFO - [generated in 0.00146s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 00:43:05,725 - INFO - COMMIT
+2024-08-24 00:43:05,780 - WARNING -  * Debugger is active!
+2024-08-24 00:43:05,789 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 00:43:07,749 - INFO - 127.0.0.1 - - [24/Aug/2024 00:43:07] "[33mGET /get_all_records HTTP/1.1[0m" 404 -
+2024-08-24 00:43:10,609 - INFO - 127.0.0.1 - - [24/Aug/2024 00:43:10] "[33mGET /get_all_records HTTP/1.1[0m" 404 -
+2024-08-24 00:43:28,773 - INFO - Entering get_records function
+2024-08-24 00:43:28,858 - INFO - BEGIN (implicit)
+2024-08-24 00:43:28,859 - INFO - SELECT user_info.emp_id AS user_info_emp_id, user_info.age AS user_info_age, user_info.name AS user_info_name, user_info.exp AS user_info_exp, user_info.gender AS user_info_gender, user_info.dept AS user_info_dept, user_info.country AS user_info_country 
+FROM user_info
+2024-08-24 00:43:28,859 - INFO - [generated in 0.00019s] {}
+2024-08-24 00:43:28,862 - INFO - Fetched all user records successfully
+2024-08-24 00:43:33,548 - INFO - ROLLBACK
+2024-08-24 00:43:33,551 - INFO - Exiting get_records function
+2024-08-24 00:43:33,553 - INFO - 127.0.0.1 - - [24/Aug/2024 00:43:33] "GET /get_records HTTP/1.1" 200 -
+2024-08-24 00:44:46,441 - INFO -  * Detected change in 'C:\\Users\\lenovo\\PycharmProjects\\user_app\\db_connections\\configurations.py', reloading
+2024-08-24 00:44:46,626 - INFO -  * Restarting with stat
+2024-08-24 00:44:47,678 - INFO - select pg_catalog.version()
+2024-08-24 00:44:47,678 - INFO - [raw sql] {}
+2024-08-24 00:44:47,679 - INFO - select current_schema()
+2024-08-24 00:44:47,679 - INFO - [raw sql] {}
+2024-08-24 00:44:47,680 - INFO - show standard_conforming_strings
+2024-08-24 00:44:47,680 - INFO - [raw sql] {}
+2024-08-24 00:44:47,680 - INFO - BEGIN (implicit)
+2024-08-24 00:44:47,683 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 00:44:47,683 - INFO - [generated in 0.00029s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 00:44:47,686 - INFO - COMMIT
+2024-08-24 00:44:47,705 - WARNING -  * Debugger is active!
+2024-08-24 00:44:47,707 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 00:45:36,930 - INFO -  * Detected change in 'C:\\Users\\lenovo\\PycharmProjects\\user_app\\user_models\\tables.py', reloading
+2024-08-24 00:45:37,074 - INFO -  * Restarting with stat
+2024-08-24 00:45:38,094 - INFO - select pg_catalog.version()
+2024-08-24 00:45:38,094 - INFO - [raw sql] {}
+2024-08-24 00:45:38,095 - INFO - select current_schema()
+2024-08-24 00:45:38,095 - INFO - [raw sql] {}
+2024-08-24 00:45:38,095 - INFO - show standard_conforming_strings
+2024-08-24 00:45:38,095 - INFO - [raw sql] {}
+2024-08-24 00:45:38,097 - INFO - BEGIN (implicit)
+2024-08-24 00:45:38,100 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 00:45:38,100 - INFO - [generated in 0.00026s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 00:45:38,103 - INFO - COMMIT
+2024-08-24 00:45:38,122 - WARNING -  * Debugger is active!
+2024-08-24 00:45:38,125 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 00:46:11,515 - INFO -  * Detected change in 'C:\\Users\\lenovo\\PycharmProjects\\user_app\\user_models\\tables.py', reloading
+2024-08-24 00:46:11,675 - INFO -  * Restarting with stat
+2024-08-24 00:46:12,630 - INFO - select pg_catalog.version()
+2024-08-24 00:46:12,630 - INFO - [raw sql] {}
+2024-08-24 00:46:12,631 - INFO - select current_schema()
+2024-08-24 00:46:12,631 - INFO - [raw sql] {}
+2024-08-24 00:46:12,631 - INFO - show standard_conforming_strings
+2024-08-24 00:46:12,631 - INFO - [raw sql] {}
+2024-08-24 00:46:12,632 - INFO - BEGIN (implicit)
+2024-08-24 00:46:12,635 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 00:46:12,635 - INFO - [generated in 0.00021s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 00:46:12,638 - INFO - COMMIT
+2024-08-24 00:46:12,658 - WARNING -  * Debugger is active!
+2024-08-24 00:46:12,663 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 00:47:08,063 - INFO -  * Detected change in 'C:\\Users\\lenovo\\PycharmProjects\\user_app\\db_connections\\configurations.py', reloading
+2024-08-24 00:47:08,288 - INFO -  * Restarting with stat
+2024-08-24 00:47:09,272 - INFO - select pg_catalog.version()
+2024-08-24 00:47:09,272 - INFO - [raw sql] {}
+2024-08-24 00:47:09,273 - INFO - select current_schema()
+2024-08-24 00:47:09,274 - INFO - [raw sql] {}
+2024-08-24 00:47:09,274 - INFO - show standard_conforming_strings
+2024-08-24 00:47:09,274 - INFO - [raw sql] {}
+2024-08-24 00:47:09,275 - INFO - BEGIN (implicit)
+2024-08-24 00:47:09,277 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2024-08-24 00:47:09,277 - INFO - [generated in 0.00020s] {'table_name': 'user_info', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2024-08-24 00:47:09,280 - INFO - COMMIT
+2024-08-24 00:47:09,301 - WARNING -  * Debugger is active!
+2024-08-24 00:47:09,305 - INFO -  * Debugger PIN: 120-295-465
+2024-08-24 00:48:52,017 - INFO -  * Detected change in 'C:\\Users\\lenovo\\PycharmProjects\\user_app\\logging_package\\logging_module.py', reloading
+2024-08-24 00:48:52,182 - INFO -  * Restarting with stat
