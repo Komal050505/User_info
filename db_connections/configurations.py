@@ -36,7 +36,7 @@ MetaData instance used to hold and manage the schema of the database.
 """
 
 # Database configuration
-DATABASE_URL = "postgresql://postgres:1995@localhost:5432/postgres"
+DATABASE_URL = "postgresql://your password and host/postgres"
 """
 The URL for connecting to the PostgreSQL database. It includes the database type,
 username, password, host, and port.
@@ -49,6 +49,7 @@ The SQLAlchemy engine used for database interactions. It is configured to connec
 to the PostgreSQL database using the DATABASE_URL. NullPool is used to disable
 connection pooling, which ensures a new connection is established for each request.
 """
+
 
 # Create all tables
 def create_tables():
